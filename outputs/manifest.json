@@ -1,0 +1,17 @@
+{
+  "name": "Central Canal Dark",
+  "short_name": "Canal Dark",
+  "description": "Organizador de IAs, prompts, nichos, links e pesquisas para canais dark.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#ff7a18",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
