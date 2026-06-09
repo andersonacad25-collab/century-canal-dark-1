@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b0b">
+    <meta name="description" content="Central para organizar pesquisas, IAs, prompts, nichos e ideias de canais dark.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <title>Central Canal Dark</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegacao principal">
+        <div class="brand">
+          <div class="brand-mark">CD</div>
+          <div>
+            <h1>Central Canal Dark</h1>
+            <p>Pesquisa, prompts e execucao</p>
+          </div>
+        </div>
+
+        <nav class="nav-list" id="navList"></nav>
+
+        <div class="storage-box">
+          <span>Backup</span>
+          <div class="storage-actions">
+            <button class="icon-text" id="exportBtn" type="button" title="Exportar dados">Exportar</button>
+            <label class="icon-text file-btn" title="Importar dados">
+              Importar
+              <input id="importFile" type="file" accept="application/json">
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu">☰</button>
+          <div>
+            <p class="eyebrow">Painel de planejamento</p>
+            <h2 id="sectionTitle">Dashboard</h2>
+          </div>
+          <button class="primary-action" id="quickAddBtn" type="button">Adicionar</button>
+        </header>
+
+        <section class="hero-panel" aria-label="Resumo do projeto">
+          <div>
+            <p class="eyebrow">Objetivo</p>
+            <strong>Organize o canal antes de produzir em escala.</strong>
+            <span>Guarde achados, avalie nichos, monte prompts e acompanhe o que ainda precisa pesquisar.</span>
+          </div>
+          <div class="score-grid" id="scoreGrid"></div>
+        </section>
+
+        <section class="section-content" id="content"></section>
+      </main>
+    </div>
+
+    <dialog id="itemDialog">
+      <form method="dialog" id="itemForm">
+        <div class="dialog-head">
+          <div>
+            <p class="eyebrow" id="dialogMode">Novo item</p>
+            <h3 id="dialogTitle">Adicionar</h3>
+          </div>
+          <button class="ghost-icon" value="cancel" type="submit" aria-label="Fechar">×</button>
+        </div>
+        <div class="form-grid" id="formFields"></div>
+        <menu class="dialog-actions">
+          <button class="ghost" value="cancel" type="submit">Cancelar</button>
+          <button class="primary-action" id="saveItemBtn" value="default" type="submit">Salvar</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
